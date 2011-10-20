@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  orgtype: 
+  title: MyString
+  commander: MyText
+  regulation: MyText
+
+two:
+  orgtype: 
+  title: MyString
+  commander: MyText
+  regulation: MyText

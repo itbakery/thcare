@@ -1,0 +1,59 @@
+have_func: checking for rb_thread_blocking_region()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i386-linux -I.  -D_FILE_OFFSET_BITS=64  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-strict-aliasing  -fPIC   conftest.c  -L. -L/usr/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3:53: error: ‘rb_thread_blocking_region’ undeclared (first use in this function)
+conftest.c:3:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:3:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i386-linux -I.  -D_FILE_OFFSET_BITS=64  -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-strict-aliasing  -fPIC   conftest.c  -L. -L/usr/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3:1: warning: implicit declaration of function ‘rb_thread_blocking_region’ [-Wimplicit-function-declaration]
+/tmp/ccPuOlKv.o: In function `t':
+/home/lookmee/railswork/thcare/formtastic/ruby/1.8/gems/mysql2-0.3.7/ext/mysql2/conftest.c:3: undefined reference to `rb_thread_blocking_region'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for mysql.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i386-linux -I.  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -fasynchronous-unwind-tables -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -fno-strict-aliasing -fwrapv -fPIC  -fPIC -g -static-libgcc -fno-omit-frame-pointer -fno-strict-aliasing -DMY_PTHREAD_FASTMUTEX=1 -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-strict-aliasing  -fPIC    conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <mysql.h>
+/* end */
+
+--------------------
+
+have_header: checking for errmsg.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i386-linux -I.  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -fasynchronous-unwind-tables -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -fno-strict-aliasing -fwrapv -fPIC  -fPIC -g -static-libgcc -fno-omit-frame-pointer -fno-strict-aliasing -DMY_PTHREAD_FASTMUTEX=1 -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-strict-aliasing  -fPIC    conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <errmsg.h>
+/* end */
+
+--------------------
+
+have_header: checking for mysqld_error.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i386-linux -I.  -D_FILE_OFFSET_BITS=64  -I/usr/include/mysql -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -fasynchronous-unwind-tables -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -fno-strict-aliasing -fwrapv -fPIC  -fPIC -g -static-libgcc -fno-omit-frame-pointer -fno-strict-aliasing -DMY_PTHREAD_FASTMUTEX=1 -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables -fno-strict-aliasing  -fPIC    conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <mysqld_error.h>
+/* end */
+
+--------------------
+

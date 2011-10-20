@@ -1,0 +1,49 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require formtastic
+ *= require_tree .
+*/
+.formtastic_evacuation_center label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin: 2px 10px;
+}
+
+.formtastic_evacuation_center div.input {
+  margin-bottom: 10px;
+}
+
+.formtastic_evacuation_center div.boolean, .formtastic_evacuation_center input[type='submit'] {
+  margin-left: 120px;
+}
+
+.formtastic_evacuation_center div.boolean label, .formtastic_evacuation_center label.collection_radio {
+  float: none;
+  margin: 0;
+}
+
+.formtastic_evacuation_center label.collection_radio {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.formtastic_evacuation_center .error {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #D00;
+  display: block;
+}
+
+.formtastic_evacuation_center .hint {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}

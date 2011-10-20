@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  evacuation_center: 
+  code: MyString
+  national_id: 1
+  name: MyString
+  surname: MyString
+  sex: MyString
+  age: 1
+  address: MyText
+  district: MyString
+  province: MyString
+  contactperson: MyText
+  health: MyText
+  hospital: MyText
+  pet: MyText
+
+two:
+  evacuation_center: 
+  code: MyString
+  national_id: 1
+  name: MyString
+  surname: MyString
+  sex: MyString
+  age: 1
+  address: MyText
+  district: MyString
+  province: MyString
+  contactperson: MyText
+  health: MyText
+  hospital: MyText
+  pet: MyText
