@@ -29,6 +29,7 @@ task :after_update_code, :roles => :app do
     run "rm -rf #{release_path}/public/#{share} "
     run "mkdir -p #{shared_path}/purple/#{share} "
     run "ln -nfs #{shared_path}/purple/#{share} #{release_path}/public/#{share} "
+    run "cd #{release_path}; RAILS_ENV=production rake assets:precompile"
   end
 end
 

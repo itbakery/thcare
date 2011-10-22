@@ -14,6 +14,12 @@ gem 'formtastic' , '1.2.4'
 gem 'activeadmin'
 gem 'paperclip'
 gem 'rmagick'
+gem 'execjs'
+gem 'therubyracer'
+group :production do
+  gem 'execjs'
+  gem 'therubyracer'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
