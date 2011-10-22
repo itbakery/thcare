@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  evacuee: 
+  deciease: 
+  remark: MyString
+
+two:
+  evacuee: 
+  deciease: 
+  remark: MyString

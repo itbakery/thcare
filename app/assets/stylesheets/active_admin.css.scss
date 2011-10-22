@@ -1,6 +1,26 @@
 // Active Admin CSS Styles
 @import "active_admin/mixins";
 @import "active_admin/base";
-
+@import "gmaps4rails";
 // To customize the Active Admin interfaces, add your
 // styles here:
+#header ul#tabs > li a {
+    border-radius: 5px 5px 5px 5px;
+    padding: 6px 10px 4px;
+    position: relative;
+    text-decoration: none;
+}
+#header ul#tabs > li.current > a {
+    background: none repeat scroll 0 0 #cc3c29;
+    font : 15px;
+    color: #FFFFFF;
+}
+#header {
+    background: -moz-linear-gradient(-90deg, #6A7176, #4D5256) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #44484B;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    overflow: visible;
+    padding: 9px 30px;
+    text-shadow: 0 1px 0 black;
+    z-index: 900;
+}

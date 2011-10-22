@@ -3,31 +3,31 @@
 one:
   evacuation_center: 
   code: MyString
-  national_id: 1
+  idcard: 1
   name: MyString
   surname: MyString
-  sex: MyString
+  gender: MyString
   age: 1
-  address: MyText
+  address: MyString
   district: MyString
   province: MyString
-  contactperson: MyText
-  health: MyText
-  hospital: MyText
-  pet: MyText
+  phone: MyString
+  contact: MyString
+  hospital: MyString
+  pet: MyString
 
 two:
   evacuation_center: 
   code: MyString
-  national_id: 1
+  idcard: 1
   name: MyString
   surname: MyString
-  sex: MyString
+  gender: MyString
   age: 1
-  address: MyText
+  address: MyString
   district: MyString
   province: MyString
-  contactperson: MyText
-  health: MyText
-  hospital: MyText
-  pet: MyText
+  phone: MyString
+  contact: MyString
+  hospital: MyString
+  pet: MyString

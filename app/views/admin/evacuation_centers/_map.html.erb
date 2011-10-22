@@ -1,0 +1,29 @@
+<%= @json %>
+
+<% content_for :scripts do %>
+  <script type="text/javascript">
+
+       Gmaps.map.HandleDragend = function(pos){
+             var px = pos.lat();
+             var py = pos.lng();
+             jQuery('#evacuation_latitude').val(px);
+             jQuery('#evacuation_longitude').val(py);
+
+       }
+
+       Gmaps.map.callback = function() {
+         google.maps.event.addListener(Gmaps.map.map, 'click', function(object){
+             alert("test");
+             var px = object.latLng.lat();
+             var py = object.latLng.lng();
+             jQuery('#evacuation_latitude').val(px);
+             jQuery('#evacuation_longitude').val(py);
+         });
+         for (var i = 0; i <  this.markers.length; ++i) {
+            google.maps.event.addListener(Gmaps.map.markers[i].serviceObject, 'dragend', function() { Gmaps.map.HandleDragend(this.getPosition()) });
+         }
+    };
+
+  </script>
+<%end%>
+<%= gmaps({"map_options"=> {"auto_zoom" => false,"zoom"=>12},"markers"=>{"data"=>@json, "options"=>{"draggable"=>true}}}) %>
